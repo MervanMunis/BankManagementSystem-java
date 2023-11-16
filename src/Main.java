@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class Main extends AccountTransaction{
     public static void main(String[] args) {
         boolean exitProgram = false;
-        while (!exitProgram) {
-            BankManager bank = new BankManager();
-            Scanner scanner = new Scanner(System.in);
+        BankManager bank = new BankManager();
+        Scanner scanner = new Scanner(System.in);
 
+        while (!exitProgram) {
             ArrayList<AccountManager> allAccounts = bank.getAccounts();
             displayMenu();
             int choiceBank = scanner.nextInt();
@@ -67,8 +67,7 @@ public class Main extends AccountTransaction{
             } catch (Exception exception) {
                 System.out.println("Error: " + exception.getMessage());
             }
-            scanner.close();
         }
-
+        scanner.close();
     }
 }

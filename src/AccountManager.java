@@ -46,11 +46,10 @@ class AccountManager {
                 throw new IllegalArgumentException("Amount must be greater than 0.");
             }
             this.balance = this.getBalance() + amount;
-            System.out.println("withdrawal of $" + amount + " successful. New abalance $" + this.getBalance());
+            System.out.println("withdrawal of $" + amount + " successful. New balance $" + this.getBalance());
         }catch (IllegalArgumentException exception) {
             System.out.println("Error: " + exception);
         }
     }
-
 }
 

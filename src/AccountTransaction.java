@@ -5,10 +5,12 @@ import java.util.InputMismatchException;
 
 public class AccountTransaction {
     static void handleTransaction(Scanner scanner, ArrayList<AccountManager> allAccounts) {
-        displayAccountMenu();
-        int choiceAccount = scanner.nextInt();
+
+
         boolean returnToMainMenu = false;
         while (!returnToMainMenu) {
+            displayAccountMenu();
+            int choiceAccount = scanner.nextInt();
             try {
                 switch (choiceAccount) {
                     case 1:
